@@ -1,0 +1,320 @@
+
+/* ================================
+   UNIVERSAL STYLING
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --text: #1e293b;
+    --muted: #64748b;
+    --background: #f1f5f9;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+/* ================================
+   HEADINGS
+================================ */
+
+h1, h2 {
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 750;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 650;
+}
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+button {
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* ================================
+   HOME PAGE
+================================ */
+
+.home {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.home h1 {
+    font-size: 42px;
+    font-weight: 750;
+    margin-bottom: 15px;
+}
+
+.home h2 {
+    font-size: 23px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.home button {
+    margin: 10px;
+    min-width: 170px;
+}
+
+/* ================================
+   FORM CONTAINER
+================================ */
+
+.form-container {
+    max-width: 460px;
+    margin: 60px auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.form-container h2 {
+    margin-bottom: 30px;
+}
+
+/* ================================
+   FORM INPUTS
+================================ */
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #334155;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 22px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: var(--text);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:hover {
+    border-color: #94a3b8;
+}
+
+input:focus {
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* ================================
+   TABLE
+================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #1e293b;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    font-size: 14px;
+    color: #334155;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tr:hover {
+    background: #eff6ff;
+    transition: background 0.2s ease;
+}
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+td form {
+    display: inline-block;
+}
+
+td button {
+    margin: 3px;
+    padding: 9px 16px;
+    font-size: 13px;
+}
+
+/* DELETE BUTTON */
+
+td form button {
+    background: white;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+td form button:hover {
+    background: #dc2626;
+    color: white;
+    border-color: #dc2626;
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.15);
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        margin: 25px auto;
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .form-container {
+        margin: 35px auto;
+        padding: 25px;
+    }
+
+    .home {
+        margin-top: 60px;
+    }
+
+    .home h1 {
+        font-size: 30px;
+    }
+
+    .home h2 {
+        font-size: 19px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .home button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
